@@ -59,7 +59,7 @@ jobs:
          # Uses sed to find and replace $oldappversion with $newappversion in K8s-deployment/Charts/latest-ingestion-pipeline/Chart.yaml and K8s-deployment/Charts/latest-ingestion-pipeline/values.yaml files
          sed -i s/$oldappversion/$newappversion/g K8s-deployment/Charts/latest-ingestion-pipeline/Chart.yaml
          sed -i s/$oldtag4_5_0/$newtag4_5_0/g K8s-deployment/Charts/latest-ingestion-pipeline/values.yaml
-         git add Docker-Swarm-deployment/single-node/latest-ingestion-pipeline/rs-stack.yaml K8s-deployment/Charts/latest-ingestion-pipeline/values.yaml K8s-deployment/Charts/latest-ingestion-pipeline/Chart.yaml
+         git add Docker-Swarm-deployment/single-node/latest-ingestion-pipeline/lip-stack.yaml K8s-deployment/Charts/latest-ingestion-pipeline/values.yaml K8s-deployment/Charts/latest-ingestion-pipeline/Chart.yaml
          git commit --allow-empty -m "updated lip docker image tag to $newtag4_5_0"
          git push --set-upstream origin lip-4.5.0-automatic-updates/$newtag4_5_0
          
@@ -84,7 +84,7 @@ jobs:
          # Uses sed to find and replace $oldappversion with $newappversion in K8s-deployment/Charts/latest-ingestion-pipeline/Chart.yaml and K8s-deployment/Charts/latest-ingestion-pipeline/values.yaml files
          sed -i s/$oldappversion/$newappversion/g K8s-deployment/Charts/latest-ingestion-pipeline/Chart.yaml
          sed -i s/$oldtag5_0_0/$newtag5_0_0/g K8s-deployment/Charts/latest-ingestion-pipeline/values.yaml
-         git add Docker-Swarm-deployment/single-node/latest-ingestion-pipeline/rs-stack.yaml K8s-deployment/Charts/latest-ingestion-pipeline/values.yaml K8s-deployment/Charts/latest-ingestion-pipeline/Chart.yaml
+         git add Docker-Swarm-deployment/single-node/latest-ingestion-pipeline/lip-stack.yaml K8s-deployment/Charts/latest-ingestion-pipeline/values.yaml K8s-deployment/Charts/latest-ingestion-pipeline/Chart.yaml
          git commit --allow-empty -m "updated lip docker image tag to $newtag5_0_0"
          git push --set-upstream origin lip-automatic-updates/$newtag5_0_0
          
